@@ -50,13 +50,13 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.path}
+                to={link.path}
                 className="text-foreground/80 hover:text-primary transition-colors font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <Link to="/support">
               <Button variant="default" size="lg">
@@ -82,14 +82,14 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-border">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.path}
+                to={link.path}
                 className="block py-2 text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <Link to="/support" onClick={() => setIsMobileMenuOpen(false)}>
               <Button variant="default" size="lg" className="w-full">
