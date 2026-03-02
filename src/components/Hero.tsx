@@ -17,9 +17,9 @@ const slides = [
     image: heroCoffee,
     title: "Consistent, Traceable Ethiopian Green Coffee for GCC Specialty Roasters",
     subtitle: "",
-    description: "Reliable origin sourcing with quality consistency, transparent traceability, and professional communication; tailored for small and medium roasters in the UAE and Saudi Arabia.",
+    description: "We supply specialty-grade Ethiopian green coffee with verified traceability, consistent lot quality, and structured export coordination; built for growing roasters in the UAE and Saudi Arabia.",
     primaryAction: { text: "Request Coffee Specs", href: "/contact" },
-    secondaryAction: { text: "Contact Us", href: "/contact" },
+    secondaryAction: { text: "Speak with Us", href: "/contact" },
   },
   {
     image: heroEcommerce,
@@ -35,7 +35,7 @@ const slides = [
     subtitle: "",
     description: "Enterprise and government-ready AI decisioning infrastructure — built for regulated industries across the UAE and Saudi Arabia. Not an AI agency. The backbone.",
     primaryAction: { text: "Explore AI Infrastructure", href: "/products" },
-    secondaryAction: { text: "Contact Us", href: "/contact" },
+    secondaryAction: { text: "Speak with Us", href: "/contact" },
   },
 ];
 

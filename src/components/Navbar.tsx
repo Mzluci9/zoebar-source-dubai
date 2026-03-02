@@ -50,7 +50,11 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className={`transition-colors font-medium ${
+                  isScrolled
+                    ? "text-foreground/80 hover:text-primary"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {link.name}
               </Link>
@@ -64,7 +68,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className={`md:hidden p-2 ${isScrolled ? "" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
