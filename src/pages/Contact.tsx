@@ -21,48 +21,68 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email via local backend server
-      const response = await fetch('http://localhost:3001/api/send-email', {
-        method: 'POST',
+      const { name, email, phone, message } = formData;
+
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
+          Authorization: "Bearer re_B8HWTGVw_Hg796QGJzwre3tzfTFwm1tDm",
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
+          from: "Zoebar Contact Form <onboarding@resend.dev>",
+          to: ["eden@zoebarbusinessgroup.com"],
+          reply_to: email,
+          subject: `New Contact from ${name}`,
+          html: `
+            <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
+              <div style="background:linear-gradient(135deg,#047857,#065f46);color:#fff;padding:30px;text-align:center;border-radius:12px 12px 0 0">
+                <h1 style="margin:0;font-size:24px">New Contact Form Submission</h1>
+                <p style="margin:10px 0 0;opacity:.9;font-size:14px">Zoebar Business Group Website</p>
+              </div>
+              <div style="padding:30px;background:#fff">
+                <div style="margin-bottom:20px;padding:15px;background:#f9fafb;border-radius:8px;border-left:4px solid #047857">
+                  <div style="font-weight:600;color:#047857;font-size:12px;text-transform:uppercase;margin-bottom:8px">Name</div>
+                  <div style="color:#1f2937;font-size:15px">${name}</div>
+                </div>
+                <div style="margin-bottom:20px;padding:15px;background:#f9fafb;border-radius:8px;border-left:4px solid #047857">
+                  <div style="font-weight:600;color:#047857;font-size:12px;text-transform:uppercase;margin-bottom:8px">Email</div>
+                  <div style="color:#1f2937;font-size:15px"><a href="mailto:${email}" style="color:#047857">${email}</a></div>
+                </div>
+                <div style="margin-bottom:20px;padding:15px;background:#f9fafb;border-radius:8px;border-left:4px solid #047857">
+                  <div style="font-weight:600;color:#047857;font-size:12px;text-transform:uppercase;margin-bottom:8px">Phone</div>
+                  <div style="color:#1f2937;font-size:15px">${phone || "Not provided"}</div>
+                </div>
+                <div style="padding:15px;background:#f9fafb;border-radius:8px;border-left:4px solid #047857">
+                  <div style="font-weight:600;color:#047857;font-size:12px;text-transform:uppercase;margin-bottom:8px">Message</div>
+                  <div style="color:#1f2937;font-size:15px;white-space:pre-wrap">${message}</div>
+                </div>
+              </div>
+              <div style="background:#047857;color:#fff;padding:20px;text-align:center;font-size:13px;border-radius:0 0 12px 12px">
+                <p style="margin:5px 0"><strong>Click reply to respond directly to ${name}</strong></p>
+                <a href="mailto:${email}" style="display:inline-block;background:#fff;color:#047857;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;margin-top:10px">Reply to ${name}</a>
+              </div>
+            </div>
+          `,
         }),
       });
 
-      const result = await response.json();
-
-      if (response.ok && result.success) {
+      if (response.ok) {
         toast.success("Message sent successfully!", {
           description: "We'll get back to you within 24 hours. Thank you!",
           duration: 5000,
         });
-        
-        // Reset form
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        throw new Error(result.error || "Failed to send message");
+        const result = await response.json();
+        throw new Error(result.message || "Failed to send message");
       }
     } catch (error: any) {
       console.error("Form submission error:", error);
-      
-      // Check if it's a connection error
-      if (error.message === 'Failed to fetch' || error.message.includes('NetworkError')) {
-        toast.error("Email server not running", {
-          description: "Please start the email server: npm run server",
-          duration: 7000,
-        });
-      } else {
-        toast.error("Unable to send message", {
-          description: error.message || "Please try again or email us directly.",
-          duration: 5000,
-        });
-      }
+      toast.error("Unable to send message", {
+        description: error.message || "Please try again or email us directly.",
+        duration: 5000,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -70,7 +90,7 @@ const Contact = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar dark />
       <div className="min-h-screen pt-20">
         <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">

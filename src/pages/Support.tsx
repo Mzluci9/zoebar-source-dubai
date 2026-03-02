@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 const Support = () => {
   return (
     <>
-      <Navbar />
+      <Navbar dark />
       <div className="min-h-screen pt-20">
         <section className="py-20 bg-gradient-section">
           <div className="container mx-auto px-4">

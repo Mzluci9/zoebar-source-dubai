@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({ dark = false }: { dark?: boolean }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,10 +24,12 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  const useLight = !dark && !isScrolled;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || dark
           ? "bg-background/95 backdrop-blur-md shadow-soft"
           : "bg-transparent"
       }`}
@@ -39,7 +41,7 @@ const Navbar = () => {
               src={logo} 
               alt="Zoebar Logo" 
               className={`h-14 w-auto transition-all duration-300 ${
-                isScrolled ? "" : "brightness-0 invert"
+                useLight ? "brightness-0 invert" : ""
               }`}
             />
           </Link>
@@ -51,9 +53,9 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={`transition-colors font-medium ${
-                  isScrolled
-                    ? "text-foreground/80 hover:text-primary"
-                    : "text-white/90 hover:text-white"
+                  useLight
+                    ? "text-white/90 hover:text-white"
+                    : "text-foreground/80 hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -68,7 +70,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled ? "" : "text-white"}`}
+            className={`md:hidden p-2 ${useLight ? "text-white" : ""}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
