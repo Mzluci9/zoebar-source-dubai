@@ -113,10 +113,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
                       <a
-                        href="mailto:natnaelargaw@gmail.com"
+                        href="mailto:eden@zoebarbusinessgroup.com"
                         className="text-primary hover:underline"
                       >
-                        natnaelargaw@gmail.com
+                        eden@zoebarbusinessgroup.com
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         We typically respond within 24 hours
@@ -131,10 +131,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                       <a
-                        href="tel:+971"
+                        href="tel:+971589899564"
                         className="text-primary hover:underline"
                       >
-                        +971 XX XXX XXXX
+                        +971 58 989 9564
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         Available Mon-Fri, 9 AM - 6 PM GST
@@ -203,7 +203,7 @@ const Contact = () => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+971 XX XXX XXXX"
+                      placeholder="+971 58 989 9564"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })

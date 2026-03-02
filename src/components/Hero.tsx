@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import heroCoffee from "@/assets/hero-coffee.jpg";
-import heroHospitality from "@/assets/hero-hospitality.jpg";
+import heroEcommerce from "@/assets/hero-ecommerce.jpg";
 import heroAI from "@/assets/hero-ai.jpg";
 import {
   Carousel,
@@ -15,27 +15,27 @@ import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     image: heroCoffee,
-    title: "From Farm to You",
-    subtitle: "Freshness Without Compromise",
-    description: "Premium Ethiopian coffee, organic produce, and exceptional hospitality services from Dubai to the world.",
-    primaryAction: { text: "Explore Products", href: "/products" },
+    title: "Consistent, Traceable Ethiopian Green Coffee for GCC Specialty Roasters",
+    subtitle: "",
+    description: "Reliable origin sourcing with quality consistency, transparent traceability, and professional communication; tailored for small and medium roasters in the UAE and Saudi Arabia.",
+    primaryAction: { text: "Request Coffee Specs", href: "/contact" },
     secondaryAction: { text: "Contact Us", href: "/contact" },
   },
   {
-    image: heroHospitality,
-    title: "Excellence in Hospitality",
-    subtitle: "Service That Exceeds Expectations",
-    description: "Professional hospitality solutions tailored to your needs. From event management to premium service delivery.",
+    image: heroEcommerce,
+    title: "eCommerce Made Simple",
+    subtitle: "Your Online Store, Our Expertise",
+    description: "End-to-end eCommerce solutions to bring premium Ethiopian products directly to customers worldwide through seamless digital experiences.",
     primaryAction: { text: "Our Services", href: "/products" },
     secondaryAction: { text: "Get Started", href: "/contact" },
   },
   {
     image: heroAI,
-    title: "AI-Driven Innovation",
-    subtitle: "The Future of Smart Solutions",
-    description: "Cutting-edge AI technology integrated into our products and services for optimal efficiency and results.",
-    primaryAction: { text: "Discover AI Solutions", href: "/products" },
-    secondaryAction: { text: "Learn More", href: "/contact" },
+    title: "Sovereign-Grade AI Infrastructure for the GCC",
+    subtitle: "",
+    description: "Enterprise and government-ready AI decisioning infrastructure — built for regulated industries across the UAE and Saudi Arabia. Not an AI agency. The backbone.",
+    primaryAction: { text: "Explore AI Infrastructure", href: "/products" },
+    secondaryAction: { text: "Contact Us", href: "/contact" },
   },
 ];
 
@@ -84,9 +84,11 @@ const Hero = () => {
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
                     {slide.title}
                   </h1>
-                  <p className="text-2xl md:text-3xl text-white/90 mb-8 animate-fade-in">
-                    {slide.subtitle}
-                  </p>
+                  {slide.subtitle && (
+                    <p className="text-2xl md:text-3xl text-white/90 mb-8 animate-fade-in">
+                      {slide.subtitle}
+                    </p>
+                  )}
                   <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 animate-fade-in">
                     {slide.description}
                   </p>

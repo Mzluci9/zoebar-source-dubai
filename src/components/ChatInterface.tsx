@@ -15,15 +15,15 @@ const WEBSITE_CONTEXT = `You are an AI assistant for Zoebar Business Group, a Du
 COMPANY OVERVIEW:
 Zoebar Business Group operates from Dubai and specializes in four main areas:
 
-1. PREMIUM ETHIOPIAN COFFEE:
-- Single-origin, farm-direct coffee beans from Ethiopian highlands
-- 100% Arabica beans
-- Naturally processed without additives
-- Available for bulk export and wholesale partnerships
-- Direct from farm with no middlemen
-- Sustainable farming practices and fair trade partnerships
-- Authentic Ethiopian flavor profile with health benefits
-- Quality certifications available
+1. ETHIOPIAN GREEN COFFEE:
+- Consistent, traceable Ethiopian green coffee for GCC specialty roasters
+- Reliable origin sourcing with quality consistency every shipment
+- Transparent traceability from farm to port
+- Tailored for small and medium roasters in the UAE and Saudi Arabia
+- Professional communication and responsive support
+- Full origin documentation provided
+- Specialty grade beans for discerning roasters
+- Flexible volumes to match roaster needs
 
 2. ORGANIC FRUITS & VEGETABLES:
 - Fresh bananas, avocados, potatoes, tomatoes, and seasonal produce
@@ -35,27 +35,33 @@ Zoebar Business Group operates from Dubai and specializes in four main areas:
 - Traceable from farm to table
 - Support for sustainable agriculture
 
-3. DUBAI HOSPITALITY SERVICES:
-- Quality apartments with modern amenities
-- Prime locations in Dubai with central access
-- Short-term and long-term accommodation options
-- Business and leisure traveler friendly
-- 24/7 support available
-- Fully equipped apartments
-- Professional property management
-- Flexible booking options with competitive rates
-- Focus on comfort, cleanliness, and exceptional service
+3. ECOMMERCE SOLUTIONS:
+- Full-service online retail platform for premium Ethiopian products
+- Beautiful, branded digital storefronts
+- Secure payment processing with multiple payment options
+- Global shipping and worldwide delivery network
+- Real-time order tracking and shipment updates
+- Direct-to-consumer sales channel
+- Subscription and bulk ordering options
+- Multi-currency and multi-language support
+- Integrated inventory management
 
-4. AI-DRIVEN SOLUTIONS:
-- Innovative AI-powered product development
-- Business optimization solutions
-- Smart automation to streamline operations
-- Data analytics for actionable insights
-- Process optimization for efficiency gains
-- Custom AI solutions tailored to client needs
-- Integration with existing systems
-- Proven ROI and efficiency improvements
-- Future-ready technology solutions
+4. SOVEREIGN AI INFRASTRUCTURE:
+- Sovereign-grade AI infrastructure company, NOT an AI services agency
+- Built for enterprise, government, and regulated industries across UAE and GCC
+- AI-native from architecture level — AI decisioning infrastructure, not chatbots or generic automation
+- Unified enterprise data platforms and AI-native model lifecycle management
+- Model governance, explainability, audit trails, and bias monitoring by design
+- Real-time AI decisioning engines for enterprise-scale deployment
+- Secure API orchestration — API-first and modular (WSO2, Kong, Apigee, AWS, Azure)
+- Cloud-agnostic deployment, UAE sovereign cloud compatible
+- Zero-trust security and data localization compliance
+- Financial services risk and compliance AI
+- Smart city intelligence systems and public-sector AI modernization
+- Climate and sustainability risk modeling
+- Arabic-first AI modeling capability
+- Built specifically for GCC regulatory frameworks
+- Responsible AI framework with bias monitoring and explainability by design
 
 CONTACT INFORMATION:
 - Based in Dubai, UAE
@@ -76,7 +82,7 @@ const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! I'm here to help you with information about Zoebar Business Group's premium Ethiopian coffee, organic produce, hospitality services, and AI solutions. How can I assist you today?",
+      content: "Hello! I'm here to help you with information about Zoebar Business Group's Ethiopian green coffee, organic produce, eCommerce solutions, and sovereign AI infrastructure. How can I assist you today?",
     },
   ]);
   const [input, setInput] = useState("");

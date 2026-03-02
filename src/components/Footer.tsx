@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="md:col-span-2">
             <img src={logo} alt="Zoebar Logo" className="h-16 w-auto mb-4 brightness-0 invert" />
             <p className="text-white/80 mb-4">
-              Premium Ethiopian coffee, organic produce, and exceptional hospitality
-              services from Dubai to the world.
+              Premium Ethiopian coffee, organic produce, and seamless eCommerce
+              solutions from Dubai to the world.
             </p>
             <p className="text-sm text-white/60">
               © 2025 Zoebar Business Group FZE LLC. All rights reserved.
@@ -52,14 +52,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0 mt-1" />
-                <a href="mailto:info@zoebar.ae" className="text-white/80 hover:text-white">
-                  info@zoebar.ae
+                <a href="mailto:eden@zoebarbusinessgroup.com" className="text-white/80 hover:text-white">
+                  eden@zoebarbusinessgroup.com
                 </a>
               </li>
               <li className="flex items-start space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0 mt-1" />
-                <a href="tel:+971" className="text-white/80 hover:text-white">
-                  +971 XX XXX XXXX
+                <a href="tel:+971589899564" className="text-white/80 hover:text-white">
+                  +971 58 989 9564
                 </a>
               </li>
             </ul>

@@ -1,19 +1,19 @@
-import { Coffee, Apple, Home, Sparkles } from "lucide-react";
+import { Coffee, Apple, ShoppingCart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCoffee from "@/assets/hero-coffee.jpg";
 import heroProduce from "@/assets/hero-produce.jpg";
-import heroHospitality from "@/assets/hero-hospitality.jpg";
+import heroEcommerce from "@/assets/hero-ecommerce.jpg";
 import heroAi from "@/assets/hero-ai.jpg";
 
 const Products = () => {
   const products = [
     {
       icon: Coffee,
-      title: "Premium Ethiopian Coffee",
+      title: "Ethiopian Green Coffee",
       description:
-        "Single-origin, farm-direct coffee beans. Healthy and naturally processed without additives. Available for bulk export and wholesale partnerships.",
+        "Consistent, traceable Ethiopian green coffee for GCC specialty roasters. Reliable origin sourcing with quality consistency and transparent traceability, tailored for small and medium roasters in the UAE and Saudi Arabia.",
       image: heroCoffee,
-      features: ["100% Arabica", "Direct from farm", "No additives", "Bulk available"],
+      features: ["Quality consistency", "Full traceability", "GCC-focused", "Specialty grade"],
     },
     {
       icon: Apple,
@@ -24,20 +24,20 @@ const Products = () => {
       features: ["Farm fresh", "No preservatives", "1-2 week delivery", "Organic certified"],
     },
     {
-      icon: Home,
-      title: "Dubai Hospitality",
+      icon: ShoppingCart,
+      title: "eCommerce Solutions",
       description:
-        "Quality apartments with modern amenities. Conveniently located for both business and leisure travelers with a focus on comfort and cleanliness.",
-      image: heroHospitality,
-      features: ["Modern amenities", "Prime location", "Business friendly", "Quality service"],
+        "Full-service online retail platform connecting premium Ethiopian products with global customers. Seamless ordering, secure payments, and worldwide delivery.",
+      image: heroEcommerce,
+      features: ["Online storefront", "Secure payments", "Global shipping", "Order tracking"],
     },
     {
       icon: Sparkles,
-      title: "AI-Driven Solutions",
+      title: "Sovereign AI Infrastructure",
       description:
-        "Innovative AI-powered product development and business optimization solutions to enhance efficiency and quality across all operations.",
+        "Enterprise and government-grade AI decisioning infrastructure for regulated industries. Zero-trust architecture, model governance, and real-time AI engines built for the GCC.",
       image: heroAi,
-      features: ["Smart automation", "Data analytics", "Process optimization", "Future-ready"],
+      features: ["AI decisioning engines", "Model governance", "Zero-trust security", "GCC compliance-ready"],
     },
   ];
 

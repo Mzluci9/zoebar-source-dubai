@@ -27,7 +27,7 @@ app.post('/api/send-email', async (req, res) => {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'Zoebar Contact Form <onboarding@resend.dev>',
-      to: ['natnaelargaw@gmail.com'],
+      to: ['eden@zoebarbusinessgroup.com'],
       replyTo: email,
       subject: `New Contact from ${name}`,
       html: `
@@ -191,7 +191,7 @@ app.listen(PORT, () => {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log(`📧 Listening on: http://localhost:${PORT}`);
   console.log(`✅ Resend API: Connected`);
-  console.log(`📬 Sending emails to: natnaelargaw@gmail.com`);
+  console.log(`📬 Sending emails to: eden@zoebarbusinessgroup.com`);
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('');
   console.log('Ready to receive contact form submissions! 🎉');

@@ -1,33 +1,33 @@
 import { useState, useEffect } from "react";
-import { Coffee, Apple, Home, Sparkles, ArrowRight, Mail } from "lucide-react";
+import { Coffee, Apple, ShoppingCart, Sparkles, ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroCoffee from "@/assets/hero-coffee.jpg";
 import heroProduce from "@/assets/hero-produce.jpg";
-import heroHospitality from "@/assets/hero-hospitality.jpg";
+import heroEcommerce from "@/assets/hero-ecommerce.jpg";
 import heroAi from "@/assets/hero-ai.jpg";
 
 const productsData = [
   {
     id: "coffee",
     icon: Coffee,
-    title: "Premium Ethiopian Coffee",
-    subtitle: "Farm to Cup Excellence",
+    title: "Ethiopian Green Coffee",
+    subtitle: "Consistent, Traceable, GCC-Ready",
     description:
-      "Single-origin, farm-direct coffee beans from the highlands of Ethiopia. Our coffee is naturally processed without any additives, maintaining its authentic flavor profile and health benefits. Perfect for wholesalers and retailers looking for premium quality.",
+      "Reliable origin sourcing of Ethiopian green coffee with quality consistency, transparent traceability, and professional communication. Tailored for small and medium specialty roasters in the UAE and Saudi Arabia.",
     image: heroCoffee,
     features: [
-      { title: "100% Arabica", desc: "Premium single-origin beans" },
-      { title: "Direct from Farm", desc: "No middlemen, better prices" },
-      { title: "No Additives", desc: "Naturally processed coffee" },
-      { title: "Bulk Available", desc: "Export and wholesale options" },
+      { title: "Quality Consistency", desc: "Uniform grade every shipment" },
+      { title: "Full Traceability", desc: "Origin transparency from farm to port" },
+      { title: "GCC-Focused", desc: "UAE & Saudi Arabia specialists" },
+      { title: "Specialty Grade", desc: "For discerning roasters" },
     ],
     benefits: [
-      "Rich, authentic Ethiopian flavor",
-      "Sustainable farming practices",
-      "Fair trade partnerships",
-      "Quality certifications available",
+      "Reliable supply chain for GCC specialty roasters",
+      "Professional communication and responsive support",
+      "Transparent sourcing with full origin documentation",
+      "Tailored volumes for small and medium roasters",
     ],
   },
   {
@@ -52,45 +52,45 @@ const productsData = [
     ],
   },
   {
-    id: "hospitality",
-    icon: Home,
-    title: "Dubai Hospitality Services",
-    subtitle: "Your Home Away from Home",
+    id: "ecommerce",
+    icon: ShoppingCart,
+    title: "eCommerce Solutions",
+    subtitle: "Shop Premium, Ship Global",
     description:
-      "Quality apartments with modern amenities in prime Dubai locations. We offer both short-term and long-term accommodation solutions for business and leisure travelers, with a focus on comfort, cleanliness, and exceptional service.",
-    image: heroHospitality,
+      "A full-service online retail platform that connects premium Ethiopian coffee and organic produce with customers worldwide. Seamless digital storefronts, secure payment processing, and reliable global logistics — all in one place.",
+    image: heroEcommerce,
     features: [
-      { title: "Modern Amenities", desc: "Fully equipped apartments" },
-      { title: "Prime Locations", desc: "Central Dubai access" },
-      { title: "Business Friendly", desc: "Work-ready spaces" },
-      { title: "Quality Service", desc: "24/7 support available" },
+      { title: "Online Storefront", desc: "Beautiful, branded shop" },
+      { title: "Secure Payments", desc: "Multiple payment options" },
+      { title: "Global Shipping", desc: "Worldwide delivery network" },
+      { title: "Order Tracking", desc: "Real-time shipment updates" },
     ],
     benefits: [
-      "Flexible booking options",
-      "Professional property management",
-      "Competitive rates",
-      "Personalized guest services",
+      "Direct-to-consumer sales channel",
+      "Subscription and bulk ordering options",
+      "Multi-currency and multi-language support",
+      "Integrated inventory management",
     ],
   },
   {
-    id: "ai-solutions",
+    id: "ai-infrastructure",
     icon: Sparkles,
-    title: "AI-Driven Solutions",
-    subtitle: "Innovation Meets Intelligence",
+    title: "Sovereign AI Infrastructure",
+    subtitle: "Infrastructure-First, Not AI-as-a-Feature",
     description:
-      "Innovative AI-powered product development and business optimization solutions. We help businesses leverage artificial intelligence to enhance efficiency, improve quality, and drive growth across all operations.",
+      "We build sovereign-grade AI infrastructure for enterprise, government, and regulated industries across the UAE and GCC. Real-time decisioning engines, model governance, zero-trust security, and compliance-ready architecture — designed as the backbone of AI-enabled financial and civic systems.",
     image: heroAi,
     features: [
-      { title: "Smart Automation", desc: "Streamline operations" },
-      { title: "Data Analytics", desc: "Actionable insights" },
-      { title: "Process Optimization", desc: "Efficiency gains" },
-      { title: "Future-Ready", desc: "Stay competitive" },
+      { title: "AI Decisioning Engines", desc: "Real-time enterprise-scale inference" },
+      { title: "Model Governance", desc: "Audit trails, explainability, bias monitoring" },
+      { title: "Zero-Trust Security", desc: "Sovereign data localization compliance" },
+      { title: "API-First & Modular", desc: "WSO2, Kong, Apigee, AWS, Azure ready" },
     ],
     benefits: [
-      "Custom AI solutions tailored to your needs",
-      "Proven ROI and efficiency improvements",
-      "Ongoing support and updates",
-      "Integration with existing systems",
+      "Built for GCC regulatory frameworks and sovereign cloud",
+      "Arabic-first AI modeling capability",
+      "Financial services risk, compliance, and operational AI",
+      "Smart city intelligence and public-sector AI modernization",
     ],
   },
 ];

@@ -17,10 +17,10 @@ const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Based in Dubai with strong partnerships in Ethiopia, we specialize in
-            delivering premium Ethiopian coffee, organic fruits and vegetables, and
-            quality hospitality services. Our mission is to connect global customers
-            directly to the source, ensuring every product meets the highest standards
-            of quality, freshness, and efficiency.
+            delivering consistent, traceable Ethiopian green coffee, organic fruits and
+            vegetables, and seamless eCommerce solutions. Our mission is to connect GCC
+            specialty roasters and global customers directly to the source, ensuring every
+            product meets the highest standards of quality, traceability, and reliability.
           </p>
         </div>
 
@@ -29,8 +29,9 @@ const About = () => {
             <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
             <p className="text-muted-foreground">
               To be a trusted global brand delivering premium, ethically sourced
-              Ethiopian coffee, fresh organic produce, and exceptional hospitality
-              experiences — where quality is never compromised.
+              Ethiopian green coffee, fresh organic produce, eCommerce platforms, and
+              sovereign-grade AI infrastructure — where quality, traceability, and trust
+              are never compromised.
             </p>
           </div>
 
