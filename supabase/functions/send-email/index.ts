@@ -21,7 +21,7 @@ serve(async (req) => {
     // Send email using Resend
     const data = await resend.emails.send({
       from: "Zoebar Contact Form <onboarding@resend.dev>",
-      to: ["natnaelargaw@gmail.com"],
+      to: ["eden@zoebarbusinessgroup.com"],
       replyTo: email,
       subject: `New Contact from ${name}`,
       html: `

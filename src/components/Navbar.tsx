@@ -38,12 +38,9 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="Zoebar Logo" 
-              className={`h-16 w-auto transition-all duration-300 ${
-                isScrolled 
-                  ? "" 
-                  : "brightness-0 invert"
+              className={`h-14 w-auto transition-all duration-300 ${
+                isScrolled ? "" : "brightness-0 invert"
               }`}
-              style={isScrolled ? { filter: 'brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(1463%) hue-rotate(129deg) brightness(91%) contrast(101%)' } : {}}
             />
           </Link>
 

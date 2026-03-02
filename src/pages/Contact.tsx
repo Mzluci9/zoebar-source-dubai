@@ -152,10 +152,10 @@ const Contact = () => {
                     For urgent inquiries or if the form doesn't work, email us directly:
                   </p>
                   <a 
-                    href="mailto:natnaelargaw@gmail.com"
+                    href="mailto:eden@zoebarbusinessgroup.com"
                     className="inline-block bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
                   >
-                    natnaelargaw@gmail.com
+                    eden@zoebarbusinessgroup.com
                   </a>
                 </div>
               </div>
