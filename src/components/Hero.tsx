@@ -39,7 +39,7 @@ const slides = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ onSlideChange }: { onSlideChange?: (index: number) => void }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -49,9 +49,13 @@ const Hero = () => {
     setCurrent(api.selectedScrollSnap());
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
+      const idx = api.selectedScrollSnap();
+      setCurrent(idx);
+      onSlideChange?.(idx);
     });
-  }, [api]);
+
+    onSlideChange?.(api.selectedScrollSnap());
+  }, [api, onSlideChange]);
 
   return (
     <section className="relative h-screen overflow-hidden">
